@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./onclick.html">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="tp"></h1>
+   <button onclick="mytime()">on click</button> 
+   <!-- <link rel="stylesheet" href="./onchange.html"> -->
+   
+
+<script>
+    
+
+
+function mytime(){
+
+let curentdate = new Date()
+let todaydate = curentdate.getDate()
+
+let todaymonth = ["jan","feb","march","april","may","jun","july","aug","sep","oct","nov","dec"]
+
+let thismonth = curentdate.getMonth()
+let allmanth = todaymonth[thismonth]
+
+let FullYear = curentdate.getFullYear()
+
+let thistime = curentdate.getHours()
+let thisminit = curentdate.getMinutes()
+let thissec = curentdate.getSeconds()
+
+
+let alldate = `${ todaydate}-${allmanth}-${FullYear}     ${thistime}:${thisminit}:${thissec}`
+
+let alldata=document.getElementById("tp").innerHTML=alldate 
+
+console.log(alldata)
+
+
+
+}
+
+
+// // function myfn(){
+// //     let a = prompt("Enter input :-")
+// //     console.log(a)
+// //     let b = document.getElementById("tp").innerHTML=a
+// // }
+
+
+
+
+
+</script>
+</body>
+</html>

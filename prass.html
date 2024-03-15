@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn1{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./media/mark-basarab-z8ct_Q3oCqM-unsplash.jpg" id="btn1" alt="errer">
+        <button onclick="myfn()">click to next img</button>
+
+    </div>
+    <script>
+        function myfn(){
+      let a=Document.getElementById('btn1').attributes[0].value = "./media/image2.jpg.jpg"
+      Document.getElementById("btn1").attributes[0].value="./media/mark-basarab-z8ct_Q3oCqM-unsplash.jpg"
+      console.log(a)
+        }
+    </script>
+</body>
+</html>

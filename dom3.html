@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 200px;
+            border: 2px solid rgb(0, 0, 0);
+        }
+        .box img{
+            width: 22px;
+        }
+    .box input{
+      border: none;
+      outline: none;
+     }
+    </style>
+</head>
+<body>
+   <div class="box">
+    <input type="password" id="btn">
+    <img src="./media/show.jpg" alt=""onclick="myfn()" id="img1">
+
+   </div>
+
+
+
+    <script>
+
+      function myfn(){
+       let password = document.getElementById("btn")
+        if(password.type=="password"){
+            password.type=Text.hide
+            let a=document.getElementById("img1").attributes[0].value="./media/show.jpg"
+
+        }
+        else{
+            password.type=="password"
+            let a=document.getElementById("img1").attributes[0].value="./media/hide.png"
+        }
+      }
+      console.log(password)
+    </script>
+</body>
+</html>

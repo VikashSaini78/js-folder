@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="output"></h1>
+    <button onclick="myfn()">Click Me</button>
+    <script>
+        
+
+let item = prompt("Enter your item :-")
+let price = prompt("Enter your price :-")
+let Quantity = prompt("Enter your Quantity :-")
+
+
+discount = 10
+gst = 20
+
+
+bill = price*Quantity
+bill_discount = bill*discount/100
+total_bill = bill_discount-bill
+bill_gst = total_bill*gst/100
+final_bill = total_bill+bill_gst
+
+
+console.log("item :-"+item)
+console.log("orginal price :-"+price)
+console.log("quantity :-"+Quantity)
+console.log("bill :-"+bill)
+console.log("bill_discount :-"+bill_discount)
+console.log("bill_gst :-"+bill_gst)
+console.log("final-bill :-"+final_bill)
+
+
+
+let a =  document.getElementById("output").innerHTML="item :-"+item+ "</br>"+ "orginal price :-"+price + "</br>"+"quantity :-"+Quantity+ "</br>"+"bill :-"+bill+ "</br>"+"bill_discount :-"+bill_discount+ "</br>"+"bill_gst :-"+bill_gst+ "</br>"+"final-bill :-"+final_bill
+console.log(a)
+
+    function myfn(){
+        window.print()
+    }
+
+
+    </script>
+</body>
+</html>

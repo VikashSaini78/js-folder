@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Basic styling for navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+/* Hide navbar links on small screens */
+.main-nav {
+  display: none;
+}
+
+/* Styling for hamburger icon */
+.navbar-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Media query for responsiveness */
+@media screen and (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="navbar-toggle" id="js-navbar-toggle">
+    <i class="fas fa-bars"></i>
+  </span>
+  <a href="#" class="logo">Logo</a>
+  <ul class="main-nav" id="js-menu">
+    <li>
+      <a href="#" class="nav-links">Home</a>
+    </li>
+    <li>
+      <a href="#" class="nav-links">About Us</a>
+    </li>
+    <li>
+      <a href="#" class="nav-links">Services</a>
+    </li>
+    <li>
+      <a href="#" class="nav-links">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<script>// JavaScript for toggling navbar on small screens
+    const navbarToggle = document.getElementById('js-navbar-toggle');
+    const menu = document.getElementById('js-menu');
+    
+    navbarToggle.addEventListener('click', function () {
+      menu.classList.toggle('active');
+    });
+    </script>
+</body>
+</html>

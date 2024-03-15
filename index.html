@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #time{
+            display: inline;
+            box-shadow: 2px 2px 2px 2px gray;
+            position: relative;
+            background-color: rgb(72, 148, 148);
+            top: 200px;
+            left: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="tt"></h1>
+    
+    <SCript>
+
+      
+
+
+
+
+
+//        let age = prompt("Enter your age :- ")
+       
+     
+
+// if(age>=18){
+//   console.log("you are vot for eligiable")
+// }
+
+// else if(age<18){
+//   console.log("you are not eligiable for vote")
+// }
+
+// else{
+//   console.log("Envalid value")
+// }
+
+
+
+
+function mytime(){
+
+let curentdate = new Date()
+let todaydate = curentdate.getDate()
+
+let todaymonth = ["jan","feb","march","april","may","jun","july","aug","sep","oct","nov","dec"]
+
+let thismonth = curentdate.getMonth()
+let allmanth = todaymonth[thismonth]
+
+let FullYear = curentdate.getFullYear()
+
+let thistime = curentdate.getHours()
+let thisminit = curentdate.getMinutes()
+let thissec = curentdate.getSeconds()
+
+
+let alldate = `${ todaydate}-${allmanth}-${FullYear}     ${thistime}:${thisminit}:${thissec}`
+let about = document.getElementById("tt").innerHTML = alldate
+
+console.log(about)
+
+
+
+}
+
+setInterval(mytime,1000)
+
+
+
+
+    </SCript>
+</body>
+</html>

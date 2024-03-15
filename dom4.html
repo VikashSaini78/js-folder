@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    #errer{
+        color: red;
+    }
+   </style>
+</head>
+<body>
+    <div>
+       <form action="./onclick.html" onsubmit="return myfn()">
+        <label for="">First name</label>
+        <input type="text" name="" id="tp"> <span id='errer'></span>
+        <br> <br>
+        <input type="submit" name="" id="">
+       </form>
+    </div>
+
+
+    <script>
+       function myfn(){
+        let a=document.getElementById('tp').value
+        if(a== ""){
+        // alert("Errer dont use the space")
+        document.getElementById('errer').innerText= "Errer please fill this field"
+        return false
+        }
+ 
+     
+        if(a.trim()==" "){
+            document.getElementById('errer').innerText= "Errer dont use the space"
+            return false
+        }
+       }
+    </script>
+</body>
+</html>
